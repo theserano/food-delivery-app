@@ -25,15 +25,20 @@ class _HomeState extends State<Home> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'Hello Serano',
-                  style: AppWidget.boldTextFieldStyle(),
+                Container(
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),  color: Colors.black54),
+                  width: MediaQuery.of(context).size.width/3,
+                  padding: const EdgeInsets.only(left: 5.0, right: 5.0),
+                  child: Image.asset(
+                      'images/logo.png',
+                      width: MediaQuery.of(context).size.width / 2,
+                      fit: BoxFit.cover),
                 ),
                 Container(
                   margin: const EdgeInsets.only(right: 20.0),
                   padding: const EdgeInsets.all(3),
                   decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: Colors.black54,
                       borderRadius: BorderRadius.circular(10)),
                   child: const Icon(
                     Icons.shopping_cart_outlined,
@@ -129,7 +134,7 @@ class _HomeState extends State<Home> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset(
-                              'images/salad2.png',
+                              'images/salad4.png',
                               height: 150,
                               width: 150,
                               fit: BoxFit.cover,
@@ -167,7 +172,7 @@ class _HomeState extends State<Home> {
               height: 30.0,
             ),
             Container(
-              margin: EdgeInsets.only(right: 20.0),
+              margin: const EdgeInsets.only(right: 20.0),
               child: Material(
                 elevation: 5.0,
                 borderRadius: BorderRadius.circular(20),
@@ -175,7 +180,7 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(5),
                   child: Row(children: [
                     Image.asset(
-                      "images/salad2.png",
+                      "images/salad4.png",
                       height: 120,
                       width: 120,
                       fit: BoxFit.cover,
@@ -207,6 +212,56 @@ class _HomeState extends State<Home> {
                             width: MediaQuery.of(context).size.width / 2,
                             child: Text(
                               '\$28',
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ))
+                      ],
+                    ),
+                  ]),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20.0,),
+            Container(
+              margin: const EdgeInsets.only(right: 20.0),
+              child: Material(
+                elevation: 5.0,
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  child: Row(children: [
+                    Image.asset(
+                      "images/salad2.png",
+                      height: 120,
+                      width: 120,
+                      fit: BoxFit.cover,
+                    ),
+                    const SizedBox(
+                      width: 20.0,
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              'Veggie Taco Hash',
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            )),
+                        const SizedBox(
+                          height: 5.0,
+                        ),
+                        Container(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              'Honey goot cheese',
+                              style: AppWidget.lightTextFieldStyle(),
+                            )),
+                        const SizedBox(
+                          height: 5.0,
+                        ),
+                        Container(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              '\$26',
                               style: AppWidget.semiBoldTextFieldStyle(),
                             ))
                       ],

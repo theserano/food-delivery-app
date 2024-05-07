@@ -83,8 +83,8 @@ class _OnboardState extends State<Onboard> {
                     context, MaterialPageRoute(builder: (context) => SignUp()));
               }
               _controller.nextPage(
-                  duration: const Duration(milliseconds: 100),
-                  curve: Curves.bounceIn);
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.fastOutSlowIn);
             },
             child: Container(
               decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(20)),
