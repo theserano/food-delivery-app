@@ -1,6 +1,6 @@
 # food_delivery_app
 
-A new Flutter project.
+Learning process with flutter, a frontend food delivery app with about three pages
 
 ## Getting Started
 
